@@ -1,5 +1,4 @@
 function [x, x_total,output] = stochastic_hiosd_sirqit_zerothorder(E,x,options)
-%% reading parameters
 n=length(x);
 % innp can compute multi - one innp as a column vector
 if isfield(options,'innpfunc')
@@ -108,6 +107,7 @@ if iter==maxiter+1
     iter=maxiter;
 end
 output = struct('x', x, 'V', V, 'it', iter);
+
 
 
 end
